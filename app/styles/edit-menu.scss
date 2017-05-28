@@ -1,0 +1,54 @@
+.navbar-toolbar {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  border-radius: 0;
+  border-right: none;
+  border-left: none;
+
+  .navbar-collapse, .navbar-nav {
+    border-color: #e7e7e7;
+    display: flex !important;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.navbar-form.form-filter {
+  margin-top: 7px;
+  flex-shrink: 1;
+}
+
+li.vertical-spacer {
+  height: 35px;
+  display: block;
+  border-right: 1px solid #e7e7e7;
+}
+
+li.toolbar-button {
+  text-align: center;
+
+  .toolbar-label {
+    font-size: x-small;
+    line-height: 1.3;
+    display: block;
+  }
+
+  &:hover .toolbar-label, &:hover i {
+    color: #6710fd;
+  }
+}
+
+li.disabled, .disabled li {
+  pointer-events: none;
+  a, a .toolbar-label, a>i {
+    color: #ccc;
+  }
+}
+
+.navbar-toolbar .navbar-text {
+  font-size: 12px;
+  align-self: center;
+  text-align: center;
+}

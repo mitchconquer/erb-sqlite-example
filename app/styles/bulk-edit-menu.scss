@@ -1,0 +1,12 @@
+.bulk-edit-tools.disabled {
+  li, li span {
+    cursor: not-allowed;
+    pointer-events: none;
+    color: #ccc;
+  }
+}
+
+.bulk-edit-tools .navbar-text {
+  max-width: 80px;
+}
+

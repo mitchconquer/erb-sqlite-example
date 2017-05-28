@@ -5,6 +5,10 @@ import MenuBuilder from './menu';
 
 let mainWindow = null;
 
+global.globalObj = {
+  desktopDir: app.getPath('desktop')
+};
+
 if (process.env.NODE_ENV === 'production') {
   const sourceMapSupport = require('source-map-support');
   sourceMapSupport.install();

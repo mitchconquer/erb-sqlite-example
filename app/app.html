@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Hello Electron React!</title>
+    <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
     <script>
       (function() {
         if (!process.env.HOT) {
@@ -13,9 +15,12 @@
           document.getElementsByTagName('head')[0].appendChild(link);
         }
       }());
+      window.preventDndLoad = function(event) {
+        event.preventDefault();
+      };
     </script>
   </head>
-  <body>
+  <body onDrop="return window.preventDndLoad(event)" onDragOver="return window.preventDndLoad(event)">
     <div id="root"></div>
     <script>
       {

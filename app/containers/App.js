@@ -1,10 +1,13 @@
 // @flow
-import React, { Component } from 'react';
-import type { Children } from 'react';
+import React, { Component, PropTypes } from 'react'
+import { DragDropContext } from 'react-dnd'
+import HTML5Backend from 'react-dnd-html5-backend'
+import '../styles/app.scss'
 
+@DragDropContext(HTML5Backend)
 export default class App extends Component {
-  props: {
-    children: Children
+  static propTypes = {
+    children: PropTypes.element.isRequired
   };
 
   render() {
@@ -12,6 +15,6 @@ export default class App extends Component {
       <div>
         {this.props.children}
       </div>
-    );
+    )
   }
 }
