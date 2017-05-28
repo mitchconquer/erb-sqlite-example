@@ -1,0 +1,26 @@
+.go-bar {
+  background-color: #b2b2b2;
+  border-color: none;
+  border: none;
+  color: #fff;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+
+  .go-button a {
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+  }
+
+  .go-button a:hover {
+    color: #484848;
+  }
+
+  &.go-bar-valid {
+    background-color: #01c369;
+    cursor: pointer;
+
+    .go-button a {
+      color: #fff;
+    }
+  }
+}
