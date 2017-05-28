@@ -5,8 +5,9 @@ import { createBrowserHistory } from 'history';
 import { routerMiddleware, push } from 'react-router-redux';
 import { createLogger } from 'redux-logger';
 import rootReducer from '../reducers';
-import * as counterActions from '../actions/counter';
-import type { counterStateType } from '../reducers/counter';
+import * as filesActions from '../actions/files';
+import * as filterActions from '../actions/filter';
+import * as mediaActions from '../actions/media';
 
 const history = createBrowserHistory();
 
@@ -31,11 +32,13 @@ const configureStore = (initialState: ?counterStateType) => {
 
   // Redux DevTools Configuration
   const actionCreators = {
-    ...counterActions,
+    ...filesActions,
+    ...filterActions,
+    ...mediaActions,
     push,
   };
   // If Redux DevTools Extension is installed use it, otherwise use Redux compose
-  /* eslint-disable no-underscore-dangle */
+  /* as eslint-disable no-underscore-dangle */
   const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
     ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
       // Options: http://zalmoxisus.github.io/redux-devtools-extension/API/Arguments.html
