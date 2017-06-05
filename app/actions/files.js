@@ -101,7 +101,7 @@ export function listEmbeddedSubs(file) {
           result => dispatch(setEmbeddedSubs(result))
         )
         .then(
-          resolve()
+          () => resolve()
         )
   })
 }
