@@ -1,0 +1,140 @@
+.media-item {
+  margin-bottom: 20px;
+  display: flex;
+  margin-left: 40px;
+  margin-right: 40px;
+  padding-bottom: 20px;
+
+  &:hover {
+    -webkit-box-shadow: 0px 0px 25px -1px rgba(0,0,0,0.1);
+    -moz-box-shadow: 0px 0px 25px -1px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 25px -1px rgba(0,0,0,0.1);
+  }
+}
+
+.media-item-body {
+  position: relative;
+
+  .media-item-delete {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 20px;
+    color: #b2b2b2;
+
+    &:hover {
+      color: #fe2f51;
+    }
+  }
+}
+
+.media-item-checkbox {
+  width: 30px;
+  display: inline-block;
+  position: absolute;
+  margin-top: 20px;
+
+  label {
+    cursor: pointer;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 0;
+    left: 0;
+    background: #eee;
+    border:1px solid #ddd;
+
+    &:after {
+      opacity: 0;
+      content: '';
+      position: absolute;
+      width: 30px;
+      height: 15px;
+      background: transparent;
+      top: -3px;
+      left: 3px;
+      border: 7px solid #6710fd;
+      border-top: none;
+      border-right: none;
+      transform: rotate(-45deg);
+      transition: opacity 0.1s;
+    }
+  }
+
+  input[type=checkbox] + label:hover::after {
+    opacity: 0.5;
+  }
+
+  input[type=checkbox] {
+    visibility: hidden;
+  }
+
+  input[type=checkbox]:checked + label::after {
+    opacity: 1;
+  }
+
+  input[type=checkbox]:checked + label:hover::after {
+    opacity: 0.5;
+  }
+
+}
+
+.media-item-time span {
+  color: #ccc;
+  margin-right: 5px;
+}
+
+.media-item-end-time {
+  margin-left: 15px;
+}
+
+.media-item .subtitle-tools {
+  padding-left: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  li {
+    margin-right: 25px;
+    a {
+      transition: color 0.2s;
+      display: block;
+    }
+    a:hover {
+      color: #6710fd;
+    }
+  }
+}
+
+.media-item-text {
+  font-size: larger;
+  font-weight: 900;
+  background: #eee;
+  padding: 5px;
+  padding-bottom: 2px;
+
+  .media-text-input {
+    background: transparent;
+    border: none;
+    width: 100%;
+    padding: 5px;
+    transition: border-color 0.2s;
+    border: 1px solid transparent;
+    overflow: hidden;
+    height: 35px;
+    padding-bottom: 0px;
+    resize: vertical;
+    overflow-y: auto;
+
+
+    &:focus {
+      outline: none;
+      bord-width: 1px;
+      border: 1px solid #6710fd;
+      border-radius: 2px;
+    }
+  }
+}
+
+.media-item-time {
+  display: inline-block;
+}

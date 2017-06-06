@@ -4,6 +4,7 @@
 
 import webpack from 'webpack';
 import merge from 'webpack-merge';
+import path from 'path';
 import BabiliPlugin from 'babili-webpack-plugin';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import baseConfig from './webpack.config.base';
@@ -43,7 +44,10 @@ export default merge.smart(baseConfig, {
      */
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'production'),
-      'process.env.DEBUG_PROD': JSON.stringify(process.env.DEBUG_PROD || 'false')
+      // 'process.env.DEBUG_PROD': JSON.stringify(process.env.DEBUG_PROD || 'false'),
+      'process.env.DEBUG_PROD': JSON.stringify('true'),
+      'process.env.FFMPEG_PATH': JSON.stringify(path.join(__dirname, 'binaries', 'ffmpeg')),
+      'process.env.FFPROBE_PATH': JSON.stringify(path.join(__dirname, 'binaries', 'ffprobe'))
     })
   ],
 

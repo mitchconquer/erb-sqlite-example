@@ -1,0 +1,17 @@
+.extracted-subs {
+  .extracted-subs-title {
+    color: #b2b2b2;
+  }
+
+  ul {
+    padding-left: 0;
+  }
+
+  li {
+    text-transform: capitalize;
+    font-size: large;
+    a:hover {
+      color: rgb(134, 142, 241);
+    }
+  }
+}

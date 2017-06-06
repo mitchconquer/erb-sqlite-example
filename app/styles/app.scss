@@ -1,0 +1,65 @@
+body {
+  position: relative;
+  color: #484848;
+  height: 100vh;
+  background-color: #fff;
+  font-family: Arial, Helvetica, Helvetica Neue, serif;
+}
+
+
+// Typography
+
+p {
+  font-size: 14px;
+}
+
+.text-success {
+  color: #01c369;
+}
+
+// Headings
+
+h2 {
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.25rem;
+  font-weight: bold;
+  letter-spacing: -.025em;
+}
+
+// lists
+
+li {
+  list-style: none;
+}
+
+// Links
+
+a {
+  color: #484848;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  opacity: 1;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+// Helpers
+
+.dont-show {
+  visibility: hidden;
+}
+
+
+.form-control {
+  transition: border-color 0.2s;
+  &:focus {
+    border-color: #6710fd;
+    box-shadow: none;
+  }
+}

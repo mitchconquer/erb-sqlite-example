@@ -1,7 +1,17 @@
 /* eslint global-require: 1, flowtype-errors/show-errors: 0 */
 // @flow
+const path = require('path');
 import { app, BrowserWindow } from 'electron';
 import MenuBuilder from './menu';
+const ffmpegPath = require('ffmpeg-static').path;
+const ffprobePath = require('ffprobe-static').path;
+console.log({ffmpegPath, ffprobePath})
+
+process.env.FFMPEG_PATH = ffmpegPath;
+process.env.FFPROBE_PATH = ffprobePath;
+
+console.log('********')
+console.log({FFMPEG_PATH: process.env.FFMPEG_PATH, FFPROBE_PATH: process.env.FFPROBE_PATH})
 
 let mainWindow = null;
 
@@ -53,8 +63,13 @@ app.on('ready', async () => {
   mainWindow = new BrowserWindow({
     show: false,
     width: 1024,
-    height: 728
+    height: 728,
+    webPreferences: {
+      devTools: true
+    }
   });
+
+  mainWindow.webContents.openDevTools();
 
   mainWindow.loadURL(`file://${__dirname}/app.html`);
 

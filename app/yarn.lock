@@ -284,6 +284,14 @@ extsprintf@1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/extsprintf/-/extsprintf-1.0.2.tgz#e1080e0658e300b06294990cc70e1502235fd550"
 
+ffmpeg-static:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/ffmpeg-static/-/ffmpeg-static-2.0.0.tgz#b060989a6c04d567ba2ad3d4027e3877b6dc72fb"
+
+ffprobe-static, ffprobe-static@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/ffprobe-static/-/ffprobe-static-2.0.0.tgz#0036f7a3afc7f02557c7dfe437aa386991ede972"
+
 figures@^1.3.5:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/figures/-/figures-1.7.0.tgz#cbe1e3affcf1cd44b80cadfed28dc793a9701d2e"
@@ -920,13 +928,14 @@ verror@1.3.6:
   dependencies:
     extsprintf "1.0.2"
 
-videocards:
-  version "1.19.0"
-  resolved "https://registry.yarnpkg.com/videocards/-/videocards-1.19.0.tgz#11e37cbaeb3a2a296038de7cb29606999ba188e6"
+videocards@1.21.0:
+  version "1.21.0"
+  resolved "https://registry.yarnpkg.com/videocards/-/videocards-1.21.0.tgz#228c4875fc24c3858c13484109c1877a3ec6fc46"
   dependencies:
     archiver "^1.1.0"
     bluebird "^3.4.6"
     chalk "^1.1.3"
+    ffprobe-static "^2.0.0"
     fluent-ffmpeg "^2.1.0"
     inquirer "^1.2.2"
     sqlite3 "^3.1.4"

@@ -1,0 +1,15 @@
+.file-dropzone {
+  width: 200px;
+  height: 200px;
+  border-width: 1px;
+  border-color: #b2b2b2;
+  border-style: dashed;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+
+  &.files-valid {
+    border-color: #01c369;
+    border-width: 1px;
+  }
+}
